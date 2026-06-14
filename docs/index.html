@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQW0641BQE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QQW0641BQE');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivek Kasadwar</title>
+    <title>Vivek Kasadwar | Systems & Application Engineer</title>
+
+    <!-- Inline Branding Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231e293b'/><text x='50' y='55' font-family='sans-serif' font-weight='bold' font-size='40' fill='%2338bdf8' dominant-baseline='middle' text-anchor='middle'>VK</text></svg>">
+
     <style>
         * {
             box-sizing: border-box;
@@ -174,39 +188,64 @@
 </head>
 <body>
 
+    <!-- Persistent Professional Header -->
     <header>
         <div class="profile-group">
             <div class="avatar">VK</div>
             <div class="meta">
                 <h1>Vivek Kasadwar</h1>
+                <p>Distributed Systems & Application Architecture</p>
             </div>
         </div>
         
         <div class="nav-actions">
+            <!-- Strategic Core Anchors -->
             <nav class="social-links">
-                <a href="https://www.linkedin.com/in/vivek-kasadwar" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vivek-kasadwar" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
             </nav>
 
-            <a href="resume.pdf" download="Vivek-Kasadwar-Resume.pdf" class="btn-download">
+            <!-- GA4 Tracked Header Download Button -->
+            <a href="resume.pdf" 
+               download="Vivek-Kasadwar-Resume.pdf" 
+               class="btn-download"
+               onclick="gtag('event', 'file_download', {'file_name': 'Vivek-Kasadwar-Resume.pdf', 'button_location': 'header'});">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Download Resume
             </a>
         </div>
     </header>
 
+    <!-- Content Workspace -->
     <div class="workspace">
         
+        <!-- Safety Fallback: Shows up instantly on mobile browsers that block iframes -->
         <div class="mobile-fallback">
             <div class="fallback-card">
                 <h2>Curriculum Vitae</h2>
                 <p>Your browser or device does not support inline document previews. You can access the document safely using the buttons below.</p>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="resume.pdf" target="_blank" class="btn-download" style="background-color: transparent; border: 1px solid #475569; color: #cbd5e1; justify-content: center;">View PDF Directly</a>
-                    <a href="resume.pdf" download="Vivek-Kasadwar-Resume.pdf" class="btn-download" style="justify-content: center;">Download PDF File</a>
+                    <!-- GA4 Tracked Mobile Direct View Button -->
+                    <a href="resume.pdf" 
+                       target="_blank" 
+                       class="btn-download" 
+                       style="background-color: transparent; border: 1px solid #475569; color: #cbd5e1; justify-content: center;"
+                       onclick="gtag('event', 'view_resume_direct', {'file_name': 'resume.pdf', 'button_location': 'mobile_fallback'});">
+                        View PDF Directly
+                    </a>
+                    <!-- GA4 Tracked Mobile Download Button -->
+                    <a href="resume.pdf" 
+                       download="Vivek-Kasadwar-Resume.pdf" 
+                       class="btn-download" 
+                       style="justify-content: center;"
+                       onclick="gtag('event', 'file_download', {'file_name': 'Vivek-Kasadwar-Resume.pdf', 'button_location': 'mobile_fallback'});">
+                        Download PDF File
+                    </a>
                 </div>
             </div>
         </div>
 
+        <!-- Desktop Core Embed Layer -->
         <iframe src="resume.pdf" type="application/pdf"></iframe>
 
     </div>
