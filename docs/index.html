@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivek Kasadwar</title>
+
+    <!-- Adblock-Resilient Google Analytics Implementation Layer -->
+    <script>
+        (function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag; // Explicit global window register
+            gtag('js', new Date());
+            gtag('config', 'G-QQW0641BQE');
+
+            // De-obfuscate Google endpoints on-the-fly to bypass basic static link blocklists
+            try {
+                var scriptTarget = atob("aHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1HLVFRVzA2NDFCUUU=");
+                var scriptEl = document.createElement('script');
+                scriptEl.async = true;
+                scriptEl.src = scriptTarget;
+                var targetNode = document.getElementsByTagName('script')[0];
+                targetNode.parentNode.insertBefore(scriptEl, targetNode);
+            } catch (e) {
+                console.warn('Telemetry fallback routing error');
+            }
+        })();
+    </script>
+
+    <!-- Dynamic Favicon Badge -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231e293b'/><text x='50' y='55' font-family='sans-serif' font-weight='bold' font-size='40' fill='%2338bdf8' dominant-baseline='middle' text-anchor='middle'>VK</text></svg>">
+
     <style>
         * {
             box-sizing: border-box;
@@ -187,7 +214,10 @@
                 <a href="https://www.linkedin.com/in/vivek-kasadwar" target="_blank">LinkedIn</a>
             </nav>
 
-            <a href="resume.pdf" download="Vivek-Kasadwar-Resume.pdf" class="btn-download">
+            <a href="resume.pdf" 
+               download="Vivek-Kasadwar-Resume.pdf" 
+               class="btn-download"
+               onclick="if(window.gtag){gtag('event', 'file_download', {'file_name': 'Vivek-Kasadwar-Resume.pdf', 'button_location': 'header'});}">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Download Resume
             </a>
@@ -201,8 +231,20 @@
                 <h2>Curriculum Vitae</h2>
                 <p>Your browser or device does not support inline document previews. You can access the document safely using the buttons below.</p>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="resume.pdf" target="_blank" class="btn-download" style="background-color: transparent; border: 1px solid #475569; color: #cbd5e1; justify-content: center;">View PDF Directly</a>
-                    <a href="resume.pdf" download="Vivek-Kasadwar-Resume.pdf" class="btn-download" style="justify-content: center;">Download PDF File</a>
+                    <a href="resume.pdf" 
+                       target="_blank" 
+                       class="btn-download" 
+                       style="background-color: transparent; border: 1px solid #475569; color: #cbd5e1; justify-content: center;"
+                       onclick="if(window.gtag){gtag('event', 'view_resume_direct', {'file_name': 'resume.pdf', 'button_location': 'mobile_fallback'});}">
+                        View PDF Directly
+                    </a>
+                    <a href="resume.pdf" 
+                       download="Vivek-Kasadwar-Resume.pdf" 
+                       class="btn-download" 
+                       style="justify-content: center;"
+                       onclick="if(window.gtag){gtag('event', 'file_download', {'file_name': 'Vivek-Kasadwar-Resume.pdf', 'button_location': 'mobile_fallback'});}">
+                        Download PDF File
+                    </a>
                 </div>
             </div>
         </div>
